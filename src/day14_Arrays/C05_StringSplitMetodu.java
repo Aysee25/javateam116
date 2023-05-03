@@ -6,9 +6,12 @@ public class C05_StringSplitMetodu {
     public static void main(String[] args) {
 
         // split methodu : istediğimiz yerden bir yaziyi bolerek, parcaciklari array'a atar
+
         String str = "Java gercekten cok guzel";
+
         // kac tane "e" harfi var
         //1) tane tane ayiralim
+
         String[] tanetane = str.split("");
         System.out.println(Arrays.toString(tanetane));  // [J, a, v, a,  , g, e, r, c, e, k, t, e, n,  , c, o, k,  , g, u, z, e, l]
         int sayac = 0;

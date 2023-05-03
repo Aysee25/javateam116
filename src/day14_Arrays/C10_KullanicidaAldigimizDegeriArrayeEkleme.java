@@ -24,6 +24,9 @@ public class C10_KullanicidaAldigimizDegeriArrayeEkleme {
         System.out.println("Lutfen arraya eklenecek degeri giriniz");
         int eklenecekDeger = scan.nextInt();
         yeniArr[yeniArr.length - 1] = eklenecekDeger;
+
+
+
         System.out.println(Arrays.toString(yeniArr)); // [2, 4, 6, 8, 45]
     }
     public static int[] kullaniciArrayElemanEkleme(int[] arr1) {

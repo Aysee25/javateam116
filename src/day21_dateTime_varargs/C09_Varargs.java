@@ -3,6 +3,7 @@ package day21_dateTime_varargs;
 public class C09_Varargs {
     public static void main(String[] args) {
         // son elementi ayirabilecegimiz bir method olusturalim
+
         islemYap(3,4);
     }
     public static void islemYap(int... bastakiSayilar){ //, String sonElement
