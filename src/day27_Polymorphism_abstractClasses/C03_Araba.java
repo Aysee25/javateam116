@@ -14,12 +14,16 @@ public abstract class C03_Araba {
         o zaman abstract method'larin body'ye ihtiyaci YOKTUR
      */
     abstract void teker();
+
     abstract void motor();
+
     abstract void gosterge();
-    void guvenlik(){
+
+    void guvenlik() {
         System.out.println("Arabalarin guvenlik onlemleri olsa iyi olur");
     }
-    void klima(){
+
+    void klima() {
         System.out.println("Arabalarin klimalari olabilir");
     }
 }

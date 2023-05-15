@@ -1,6 +1,6 @@
 package day27_Polymorphism_abstractClasses;
 
-public class C05_Nissan extends C03_Araba{
+public class C05_Nissan extends C03_Araba {
 /*
         Abstract class'lar yokken class'larimiza ozel bir isim vermemistik
         Ama abstract class'lar devreye girince

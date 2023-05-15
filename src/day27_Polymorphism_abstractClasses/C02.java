@@ -3,15 +3,17 @@ package day27_Polymorphism_abstractClasses;
 import java.util.ArrayList;
 
 public class C02 extends C01_overridingReturnType {
-    void method1(){
+    void method1() {
     }
+
     double method2() {
         // Return type void veya PRIMITIVE data turu ise
         // overridden method ile overriding method'un return type'lari
         // AYNI OLMALIDIR
         return 3;
     }
-    String method3(){
+
+    String method3() {
         // Return type NON-PRIMITIVE ise
         // child class'daki method'un return type'i
         // parent class'daki overridden method'un return type'inin
@@ -20,7 +22,8 @@ public class C02 extends C01_overridingReturnType {
         //  Covariant
         return "Selenium Heyecandir";
     }
-    ArrayList<String> method4(){
+
+    ArrayList<String> method4() {
         return new ArrayList<>();
     }
 }

@@ -1,6 +1,6 @@
 package day27_Polymorphism_abstractClasses;
 
-public abstract class C07_AbstractP extends C06_AbstracGP{
+public abstract class C07_AbstractP extends C06_AbstracGP {
 /*
         Abstract bir class'in concrete child'i
         Parent'i olan abstract class'daki tum abstract method'lari IMPLEMENT etmek ZORUNDADIR
@@ -16,17 +16,17 @@ public abstract class C07_AbstractP extends C06_AbstracGP{
 
      */
 
-    void method1(){
+    protected void method1() {
         System.out.println("Parent class concrete method1");
     }
 
-    void method4(){
+    protected void method4() {
         System.out.println("Parent class concrete method 4");
     }
 
-    abstract void method5();
+    protected abstract void method5();
 
-    void method6(){
+    protected void method6() {
         System.out.println("Parent class concrete method6");
     }
 }
