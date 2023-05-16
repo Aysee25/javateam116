@@ -1,4 +1,4 @@
-package day29_Exceptions;
+package day29_exceptions;
 
 public class C06_CatchBlogu_e_Kullanimi {
     public static void main(String[] args) {
