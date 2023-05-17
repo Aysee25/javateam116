@@ -58,4 +58,4 @@ public class C04_Iterator {
         System.out.println(sayilar); // []
     }
     }
-}
+
