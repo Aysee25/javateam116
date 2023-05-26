@@ -118,5 +118,74 @@ public class MapMethodlar {
 
         return ogrenciMap;
     }
+    public static void numaraliTumOgrenciListesiYazdir(Map<Integer, String> ogrenciMap) {
+        Set<Map.Entry<Integer,String>> ogrenciEntrySeti= ogrenciMap.entrySet();
+        // [101=Ali-Can-11-H-MF, 102=Veli-Cem-10-K-TM, 103=Ali-Cem-11-K-TM, 104=Ayse-Can-10-H-MF, 105=Sevgi-Cem-11-M-TM, 106=Sevgi-Can-10-K-MF]
+        // bu sekilde map ile degil set ile ugrasmis olacagiz
+        // tek bir for-each loop ile hem key'e hem de value'ye ulasabilecegiz
+        // ogrenci listesini numara-isim-soyisim-sinif seklinde yazdirin
+        System.out.println("No  Isim    Soyisim   sinif");
+        System.out.println("___________________________");
+        for (Map.Entry<Integer,String> eachEntry: ogrenciEntrySeti
+        ) {
+            String ogrenciValue= eachEntry.getValue();// Ali-Can-11-H-MF
+            String[] ogrenciValueArr = ogrenciValue.split("-"); // [Ali, Can, 11, H, MF]
+            System.out.println(eachEntry.getKey()+" "+ogrenciValueArr[0] + " "
+                    + ogrenciValueArr[1]+" "+ogrenciValueArr[2] );
+        }
+        /*
+        101=Ali-Can-11-H-MF
+        102=Veli-Cem-10-K-TM
+        103=Ali-Cem-11-K-TM
+        104=Ayse-Can-10-H-MF
+        105=Sevgi-Cem-11-M-TM
+        106=Sevgi-Can-10-K-MF
+         */
+    }
+
+
+    public static Map<Integer, String> yilSonuSinifArttir(Map<Integer, String> ogrenciMap) {
+
+        // tum Entry'leri ele almak icin
+        Set<Map.Entry<Integer,String>> ogrenciEntrySeti =ogrenciMap.entrySet();
+        // ogrenciEntrySet'inde her bir entry ele alıp istenen update yapalim
+
+        for (Map.Entry<Integer,String> eachEntry:ogrenciEntrySeti
+             ) {
+            String eachValue=eachEntry.getValue();
+            String[] eachValueArr=eachValue.split("-");
+
+            if (eachValueArr[2].equalsIgnoreCase("Mezun")){
+                Integer sinif=Integer.parseInt(eachValueArr[2]);
+                if (sinif < 12){
+                    sinif++;
+                    eachValueArr[2] = " "+sinif;
+                }else {
+                    eachValueArr[2]="Mezun";
+                }
+            }
+            eachEntry.setValue(eachValueArr[0]+"-"+eachValueArr[1]+"-"+eachValueArr[2]+"-"+eachValueArr[3]+"-"+eachValueArr[4]);
+        }
+
+        return ogrenciMap;
+    }
+
+    public static Map<Integer,String> soyisimleriBuyukHarfYap(Map<Integer,String> ogrenciMap) {
+
+        // soyisimleri buyuk harf yap
+        // soyisim bilgisine ulasincaya kadar bol
+        Set<Map.Entry<Integer,String>> ogrenciEntrySeti = ogrenciMap.entrySet();
+        for (Map.Entry<Integer,String>  eachEntry : ogrenciEntrySeti
+        ) { // 101=Ali-Can-11-H-MF
+            String eachValue = eachEntry.getValue(); // Ali-Can-11-H-MF
+            String[] eachvalueArr = eachValue.split("-"); // [Ali, Can, 11, H, MF]
+            // soyisim bilgisini update et
+            eachvalueArr[1] = eachvalueArr[1].toUpperCase(); // // [Ali, CAN, 11, H, MF]
+            // soyismin yeni hali ile map'i update et
+            eachEntry.setValue(eachvalueArr[0] + "-"+eachvalueArr[1] + "-"+
+                    eachvalueArr[2] + "-"+eachvalueArr[3] + "-"+eachvalueArr[4]);
+        }
+        return ogrenciMap;
+    }
 }
 

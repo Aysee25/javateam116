@@ -4,9 +4,12 @@ import java.util.*;
 
 public class C01_MapOlusturma {
     public static void main(String[] args) {
+
         // variable olusturma
+
         int sayi = 5 ;
         String str= "Java Candir";
+        
         // coklu element barindiran collections olusturma
         List<String> liste = new ArrayList<>();
         Set<Integer> sayiSeti = new HashSet<>();
